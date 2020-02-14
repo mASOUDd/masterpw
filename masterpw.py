@@ -12,6 +12,7 @@ url = input('The url: ')
 h = sha512(p.encode()).hexdigest()
 
 # specific password for this url
-# 'ehem': because why not
-sp = sha512((h + 'ehem' + url + h).encode()).hexdigest()
+# choose a unique salt
+salt = 'salt'
+sp = sha512((h + salt + url + h).encode()).hexdigest()
 print('Password: {}'.format(sp))
