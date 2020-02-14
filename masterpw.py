@@ -15,4 +15,4 @@ h = sha512(p.encode()).hexdigest()
 # choose a unique salt
 salt = 'salt'
 sp = sha512((h + salt + url + h).encode()).hexdigest()
-print('Password: {}'.format(sp))
+print('Password: A1!{}'.format(sp))
